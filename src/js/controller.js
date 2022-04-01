@@ -1,10 +1,10 @@
+import view from "./views/view.js";
+
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { async } from "regenerator-runtime/runtime";
 
 import * as model from "./model.js";
-
-import View from "./views/View.js";
 
 if (module.hot) {
   module.hot.accept();
@@ -13,23 +13,23 @@ if (module.hot) {
 // Implementing the search query
 const controlSearchResults = async function () {
   try {
-    View.renderSpinner();
+    view.renderSpinner();
 
-    const query = View.getQuery();
+    const query = view.getQuery();
     if (!query) return;
 
     await model.loadWeather(query);
 
-    View.render(model.state.search.results);
+    view.render(model.state.search.results);
   } catch (err) {
     console.log(err);
-    View.renderError();
+    view.renderError();
   }
 };
 
 // Initialization function
 const init = function () {
-  View.addHandlerRenderer(controlSearchResults);
+  view.addHandlerRenderer(controlSearchResults);
 };
 
 init();
