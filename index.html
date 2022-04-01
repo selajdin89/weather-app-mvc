@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="icon" href="./src/img/sun.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Nunito:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer type="module" src="./src/js/controller.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="bg-video">
+        <video class="bg-video__content" autoplay muted loop>
+          <source src="./src/img/Sunset - 8451.webm" />
+          <source src="./src/img/Sunset - 8451.mp4" />
+        </video>
+      </div>
+      <div class="header">
+        <svg class="icon-sun">
+          <use xlink:href="./src/img/symbol-defs.svg#icon-sun"></use>
+        </svg>
+        <h1 class="heading">Weather Stack</h1>
+      </div>
+      <form class="search">
+        <input
+          type="text"
+          class="search__field"
+          placeholder="Enter city here"
+        />
+        <button class="btn">
+          <svg>
+            <use href="./src/img/icons.svg#icon-search"></use>
+          </svg>
+          <span>search</span>
+        </button>
+      </form>
+
+      <div class="container">
+        <!-- <div class="search_result">
+      <div class="header_description">
+        <span class="current_weather_time"
+          ><h2>CURRENT WEATHER</h2>
+          <p class="time">13:17</p></span
+        >
+        <span class="icon_description"
+          ><svg class="weather_icon">
+            <use href="src/img/icons.svg#icon-smile"></use>
+          </svg>
+          <p class="temperature">11</p>
+          <p class="weather_description">SUNNY</p>
+        </span>
+      </div>
+      <div class="detailed_data">
+        <ul class="weather_data left_side_data">
+          <li class="list">
+            <p class="parameter">Max UV Index</p>
+            <span class="unit">2 Low</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Wind</p>
+            <span class="unit">0 km/h</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Wind Gusts</p>
+            <span class="unit">0 km/h</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Humidity</p>
+            <span class="unit">71%</span>
+          </li>
+        </ul>
+        <ul class="weather_data right_side_data">
+          <li class="list">
+            <p class="parameter">Dew Point</p>
+            <span class="unit">6</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Pressure</p>
+            <span class="unit">1022</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Cloud Cover</p>
+            <span class="unit">0%</span>
+          </li>
+          <li class="list">
+            <p class="parameter">Visibility</p>
+            <span class="unit">16 km</span>
+          </li>
+        </ul>
+      </div>
+      </div>
+     -->
+      </div>
+    </div>
+  </body>
+</html>
